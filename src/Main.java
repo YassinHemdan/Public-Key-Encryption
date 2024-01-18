@@ -2,7 +2,7 @@ import Crypto.*;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Sender sender = new Sender("hi, i'll be so glad if u gave me the full mark :)");
+        Sender sender = new Sender("hi, this is the plain text");
         CBC cbc = new CBC();
         MessageEncryptor encryptor = new MessageEncryptor(sender.getMessage(), sender.getPrivateKey(), cbc);
         encryptor.EncryptHashValue();
